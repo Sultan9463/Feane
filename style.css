@@ -1,0 +1,353 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100% !important;
+    background: linear-gradient(115deg,rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%);
+}
+
+.header{
+    background: linear-gradient(115deg,rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%) !important;
+    width: 100% !important;
+   display: flex;
+    justify-content: center;
+    position: fixed !important;
+     z-index: 99999 !important;
+}
+
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+.home {
+    height: 100vh;
+    background-image: url(images/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carousel-indicators {
+    width: 100px;
+    margin: 0;
+    /* espace depuis le bord gauche */
+}
+.carousel-indicators [data-bs-target] {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FFBE31;
+    opacity: 0.5;
+}
+.carousel-inner {
+    width: 100% !important;
+    padding-top: 300px;
+}
+.btn {
+    width: 130px !important;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #ffffff;
+}
+
+.panier{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #FFBE31;
+}
+
+/* Navbar desktop */
+.navbar{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.abt{
+    width: 400px !important;
+}
+
+.navbar a:hover {
+    color: #FFBE31;
+}
+i:hover{
+    color: #FFBE31;
+    cursor: pointer;
+}
+
+/* Burger menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger div {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Checkbox hack */
+#menu-toggle {
+    display: none;
+}
+
+.butn {
+    background-color: #FFBE31;
+    color: white;
+    border: none;
+    padding: 7px;
+    width: 130px;
+    border-radius: 14px;
+}
+.about {
+    background-color: #202831;
+}
+.footer {
+    background-color: #202831;
+    color: white;
+}
+span {
+    padding-top: 70px;
+}
+
+
+.card_1 {
+    background-color: #202831;
+    color: white;
+}
+
+.ima {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    border: 10px solid #FFBE31;
+}
+
+.crat {
+    width: 150px !important;
+}
+.card {
+    width: 300px;
+    height: 500px;
+}
+.card img {
+    width: 170px;
+}
+
+.cercle {
+    width: 40px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: #202831;
+}
+
+.nav-link.active {
+    color: #FFBE31;
+}
+
+.imag {
+    background-color: #f2f3f4;
+    width: 100%;
+    height: 180px !important;
+    border-bottom-left-radius: 28px !important;
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 30px;
+    background-color: #FFBE31;
+    border-radius: 15px;
+}
+.menu{
+    padding-top: 100px !important;
+}
+
+.carou {
+    /* background-color: #FFBE31; */
+    display: flex;
+    align-items: end;
+    height: 400px;
+    padding-bottom: 100px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #FFBE31;
+    padding-bottom: 10px !important;
+    padding-top: 30px !important;
+    border-radius: 30px !important;
+}
+
+.client {
+    width: 120px !important;
+    border: 7px solid #FFBE31;
+    border-radius: 50% !important;
+}
+
+/* Taille et mise en forme de ta card */
+.custom-card {
+    width: 70% !important;
+    height: 250px;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: static !important;
+    width: auto !important;
+}
+
+/* Icônes plus visibles si besoin */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100% 100%;
+}
+
+
+/* La card entière */
+.card-blog {
+    background: #F9F8F6;
+    border-radius: 7px !important;
+    overflow: hidden;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+/* Effet hover sur toute la card */
+.card-blog:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+.lien:hover{
+    color: #FFBE31;
+    cursor: pointer !important;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .home{
+        background-position: top;
+    }
+    .navbar {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 60px;
+        left: 0;
+        width: 100% !important;
+        background-color: #202831;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        padding: 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* Afficher menu quand checkbox cochée */
+    #menu-toggle:checked + .burger + .navbar {
+        max-height: 500px; 
+        transition: max-height 0.3s ease-in;
+    }
+}
+
+
+/* --- Animation rapide avant X --- */
+#menu-toggle:checked + .burger {
+    animation: rotateBurger 0.3s ease forwards;
+}
+
+@keyframes rotateBurger {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Transformation en X après rotation */
+#menu-toggle:checked + .burger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px,5px);
+    transition: transform 0.3s 0.3s ease;
+}
+
+#menu-toggle:checked + .burger div:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.3s 0.3s ease;
+}
+
+#menu-toggle:checked + .burger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px,-5px);
+    transition: transform 0.3s 0.3s ease;
+}
+
+/* Retour à l'état burger */
+#menu-toggle:not(:checked) + .burger div:nth-child(1),
+#menu-toggle:not(:checked) + .burger div:nth-child(2),
+#menu-toggle:not(:checked) + .burger div:nth-child(3) {
+    transform: rotate(0) translate(0,0);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle:not(:checked) + .burger {
+    animation: none;
+}
+@media (max-width: 425px) {
+    .navbar{
+        background-image: url(images/hero-bg.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+
+}
