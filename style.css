@@ -4,9 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
 }
+
 header {
     position: fixed !important;
     display: flex;
@@ -17,32 +19,35 @@ header {
     color: white;
     position: relative;
     width: 100% !important;
-    background: linear-gradient(115deg,rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%);
+    background: linear-gradient(115deg, rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%);
 }
 
-.header{
-    background: linear-gradient(115deg,rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%) !important;
+.header {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 1) 36%, rgb(43, 42, 42) 91%) !important;
     width: 100% !important;
-   display: flex;
+    display: flex;
     justify-content: center;
     position: fixed !important;
-     z-index: 99999 !important;
+    z-index: 99999 !important;
 }
 
 .font-dancing {
     font-family: 'Dancing Script', cursive;
 }
+
 .home {
     height: 100vh;
     background-image: url(images/hero-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .carousel-indicators {
     width: 100px;
     margin: 0;
     /* espace depuis le bord gauche */
 }
+
 .carousel-indicators [data-bs-target] {
     width: 18px;
     height: 18px;
@@ -50,10 +55,12 @@ header {
     background-color: #FFBE31;
     opacity: 0.5;
 }
+
 .carousel-inner {
     width: 100% !important;
     padding-top: 300px;
 }
+
 .btn {
     width: 130px !important;
 }
@@ -63,7 +70,7 @@ header {
     background-color: #ffffff;
 }
 
-.panier{
+.panier {
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -71,7 +78,7 @@ header {
 }
 
 /* Navbar desktop */
-.navbar{
+.navbar {
     display: flex;
     gap: 60px;
     align-items: center;
@@ -80,7 +87,7 @@ header {
 
 .navbar ul {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
     margin: 0;
 }
@@ -90,14 +97,16 @@ header {
     text-decoration: none;
     transition: color 0.3s;
 }
-.abt{
+
+.abt {
     width: 400px !important;
 }
 
 .navbar a:hover {
     color: #FFBE31;
 }
-i:hover{
+
+i:hover {
     color: #FFBE31;
     cursor: pointer;
 }
@@ -130,13 +139,16 @@ i:hover{
     width: 130px;
     border-radius: 14px;
 }
+
 .about {
     background-color: #202831;
 }
+
 .footer {
     background-color: #202831;
     color: white;
 }
+
 span {
     padding-top: 70px;
 }
@@ -157,10 +169,12 @@ span {
 .crat {
     width: 150px !important;
 }
+
 .card {
     width: 300px;
     height: 500px;
 }
+
 .card img {
     width: 170px;
 }
@@ -192,7 +206,8 @@ span {
     background-color: #FFBE31;
     border-radius: 15px;
 }
-.menu{
+
+.menu {
     padding-top: 100px !important;
 }
 
@@ -236,6 +251,7 @@ span {
     gap: 10px;
     margin-top: 10px;
 }
+
 .carousel-control-prev,
 .carousel-control-next {
     position: static !important;
@@ -261,35 +277,52 @@ span {
 .card-blog:hover {
     transform: translateY(-8px) scale(1.02);
 }
-.lien:hover{
+
+.lien:hover {
     color: #FFBE31;
     cursor: pointer !important;
 }
 
+i:hover {
+    color: #FFBE31 !important;
+}
+
+
 @media (max-width: 768px) {
+    header {
+        position: relative !important;
+        /* Change fixed -> relative */
+    }
+
     .burger {
         display: flex;
     }
-    .home{
+
+    .home {
         background-position: top;
     }
+
     .navbar {
         position: absolute;
         flex-direction: column;
+        text-align: center;
         align-items: center;
         justify-content: center;
         top: 60px;
         left: 0;
         width: 100% !important;
-        background-color: #202831;
+        /* background-color: #202831; */
+        background: transparent;
+        color: #f2f3f4;
         overflow: hidden;
         max-height: 0;
-        transition: max-height 0.3s ease-out;
+        /* padding: 30px !important; */
         padding: 0;
     }
 
     .navbar ul {
         flex-direction: column;
+        gap: 10px !important;
     }
 
     .navbar a {
@@ -298,63 +331,80 @@ span {
     }
 
     /* Afficher menu quand checkbox cochée */
-    #menu-toggle:checked + .burger + .navbar {
-        max-height: 500px; 
+    #menu-toggle:checked+.burger+.navbar {
+        max-height: 500px;
         transition: max-height 0.3s ease-in;
+        padding: 30px 0;
     }
 }
 
 
 /* --- Animation rapide avant X --- */
-#menu-toggle:checked + .burger {
+#menu-toggle:checked+.burger {
     animation: rotateBurger 0.3s ease forwards;
 }
 
 @keyframes rotateBurger {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Transformation en X après rotation */
-#menu-toggle:checked + .burger div:nth-child(1) {
-    transform: rotate(45deg) translate(5px,5px);
+#menu-toggle:checked+.burger div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
     transition: transform 0.3s 0.3s ease;
 }
 
-#menu-toggle:checked + .burger div:nth-child(2) {
+#menu-toggle:checked+.burger div:nth-child(2) {
     opacity: 0;
     transition: opacity 0.3s 0.3s ease;
 }
 
-#menu-toggle:checked + .burger div:nth-child(3) {
-    transform: rotate(-45deg) translate(5px,-5px);
+#menu-toggle:checked+.burger div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
     transition: transform 0.3s 0.3s ease;
 }
 
 /* Retour à l'état burger */
-#menu-toggle:not(:checked) + .burger div:nth-child(1),
-#menu-toggle:not(:checked) + .burger div:nth-child(2),
-#menu-toggle:not(:checked) + .burger div:nth-child(3) {
-    transform: rotate(0) translate(0,0);
+#menu-toggle:not(:checked)+.burger div:nth-child(1),
+#menu-toggle:not(:checked)+.burger div:nth-child(2),
+#menu-toggle:not(:checked)+.burger div:nth-child(3) {
+    transform: rotate(0) translate(0, 0);
     opacity: 1;
     transition: all 0.3s ease;
 }
 
-#menu-toggle:not(:checked) + .burger {
+#menu-toggle:not(:checked)+.burger {
     animation: none;
 }
 
 @media (max-width: 425px) {
-    .navbar{
-        background-image: url(images/hero-bg.jpg);
-        background-size: cover;
-        background-position: top;
+    .carousel-inner {
+        width: 100% !important;
+        padding-top: 400px;
     }
 
-    .card-body-coustomer{
+    .card-body-coustomer {
         width: 100% !important;
         height: 200px !important;
         /* background-color: #FFBE31 !important; */
+    }
+
+    .navbar-1 {
+        background-image: url(images/hero-bg.jpg) !important;
+        background-size: cover;
+
+    }
+
+    .home {
+        background-image: url(images/hero-bg.jpg) !important;
+        background-size: cover;
+        height: 80vh;
     }
 
 }

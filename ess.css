@@ -1,0 +1,88 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Burger */
+.burger {
+    width: 30px;
+    height: 25px;
+    display: none; /* caché en desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: .4s;
+}
+
+/* Cacher le checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu (mobile fermé par défaut) */
+.menu {
+    overflow: hidden;
+    max-height: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+    transition: max-height .5s ease;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+}
+/* Quand on clique */
+#menu-toggle:checked ~ .menu {
+    max-height: 300px;
+}
+@media (max-width: 1024px) {
+    .burger {
+        display: flex; /* burger visible */
+    }
+    .menu {
+        max-height: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media (min-width: 1025px) {
+    #menu-toggle,
+    .burger {
+        display: none; /* burger + checkbox supprimés */
+    }
+    .menu {
+        max-height: none; /* menu toujours ouvert */
+        background: none;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+}
