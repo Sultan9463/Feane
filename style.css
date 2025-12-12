@@ -343,11 +343,18 @@ span {
 #menu-toggle:not(:checked) + .burger {
     animation: none;
 }
+
 @media (max-width: 425px) {
     .navbar{
         background-image: url(images/hero-bg.jpg);
         background-size: cover;
         background-position: top;
+    }
+
+    .card-body-coustomer{
+        width: 100% !important;
+        height: 200px !important;
+        /* background-color: #FFBE31 !important; */
     }
 
 }
