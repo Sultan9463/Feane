@@ -6,83 +6,91 @@
 }
 
 /* Header */
-header {
+.header {
+    background-color: #dc3545;
     width: 100%;
-    background: black;
+}
+
+/* Ligne du haut */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Logo */
+.logo {
     color: white;
-    padding: 10px 20px;
-    position: relative;
+    font-size: 22px;
 }
 
 /* Burger */
 .burger {
-    width: 30px;
-    height: 25px;
-    display: none; /* caché en desktop */
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 5px;
     cursor: pointer;
 }
 
 .burger span {
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: .4s;
+    width: 25px;
+    height: 3px;
+    background-color: white;
 }
 
-/* Cacher le checkbox */
+/* Checkbox caché */
 #menu-toggle {
     display: none;
 }
 
-/* Menu (mobile fermé par défaut) */
+/* Menu */
 .menu {
-    overflow: hidden;
-    max-height: 0;
-    background: transparent;
-    display: flex;
+    display: none;
     flex-direction: column;
-    gap: 15px;
-    padding-left: 20px;
-    transition: max-height .5s ease;
+    background-color: #202326; /* couleur visible */
 }
 
+/* Liens */
 .menu a {
     color: white;
     text-decoration: none;
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 15px 20px;
+    border-top: 1px solid #333;
 }
-/* Quand on clique */
-#menu-toggle:checked ~ .menu {
-    max-height: 300px;
-}
-@media (max-width: 1024px) {
+
+/* === MOBILE === */
+@media (max-width: 768px) {
     .burger {
-        display: flex; /* burger visible */
+        display: flex;
     }
-    .menu {
-        max-height: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
     }
 }
-@media (min-width: 1025px) {
-    #menu-toggle,
-    .burger {
-        display: none; /* burger + checkbox supprimés */
-    }
+
+/* === DESKTOP === */
+@media (min-width: 769px) {
     .menu {
-        max-height: none; /* menu toujours ouvert */
-        background: none;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 30px;
-        padding: 0;
+        background-color: #dc3545; /* même couleur que le header */
+        padding: 10px 0;
     }
 
     .menu a {
-        font-size: 18px;
+        border: none;
     }
+
+    .burger {
+        display: none;
+    }
+}
+
+/* Contenu */
+.content {
+    padding: 20px;
 }
